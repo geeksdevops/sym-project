@@ -27,14 +27,14 @@ def call(body)
         branch_name = new ChoiceParameterDefinition('BRANCH', ['development','staging'] as String[],'')
         value = input(message: 'Please select specified inputs', parameters: [branch_name])
         if(value == 'development') {
-               LINUX_CREDENTIALS = 'FCA-DEV-R1'
-               DEPLOYMENT_SERVERS = '13.55.48.235'
+               LINUX_CREDENTIALS = 'DEV-R1'
+               DEPLOYMENT_SERVERS = 'SERVER_IP'
 	       ENVIRONMENT = 'development'
                BRANCH = 'development'
         }
 	if(value == 'staging') {
-               LINUX_CREDENTIALS = 'FCA-TEST-R1'
-               DEPLOYMENT_SERVERS = '13.210.243.111'
+               LINUX_CREDENTIALS = 'TEST-R1'
+               DEPLOYMENT_SERVERS = 'SERVER_IP'
 	       ENVIRONMENT = 'staging'
 	       BRANCH = 'staging'
 	}
@@ -150,4 +150,3 @@ def call(body)
 
    }
 }
-
