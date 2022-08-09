@@ -24,9 +24,9 @@ def call(body)
         def html = new htmlReport()
         currentBuild.result = "SUCCESS"
         NEXT_STAGE = "none"
-               LINUX_CREDENTIALS = 'FCA-PROD-R1'
-               DEPLOYMENT_SERVERS = '13.54.163.217,13.210.115.135'
-               ENVIRONMENT = 'production'
+               LINUX_CREDENTIALS = 'PROD-1'
+               DEPLOYMENT_SERVERS = 'SERVER_IP1,SERVER_IP2'
+               ENVIRONMENT = 'PUT_ANY_ENV_NAME'
                BRANCH = 'master'
         stage ('\u2776 Code Checkout') {
            def git = new git()
@@ -140,4 +140,3 @@ def call(body)
 
    }
 }
-
